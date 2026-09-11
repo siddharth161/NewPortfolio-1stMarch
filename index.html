@@ -17,7 +17,7 @@
   <meta property="og:image" content="siddharthformal.jpeg">
   
   <!-- Stylesheets & Fonts -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2.2">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="icon" type="image/jpeg" href="siddharthformal.jpeg">
@@ -27,10 +27,12 @@
   <!-- Top Reading Progress Bar -->
   <div id="scroll-progress"></div>
 
-  <!-- Ambient Glowing Background Elements -->
-  <div class="ambient-glow ambient-glow-1"></div>
-  <div class="ambient-glow ambient-glow-2"></div>
-  <div class="ambient-glow ambient-glow-3"></div>
+  <!-- Ambient Glowing Background Elements (Viewport-confined) -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+  </div>
 
   <!-- =========================================================================
        Navigation Bar
@@ -51,13 +53,14 @@
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#credentials" class="nav-link">Education</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li class="mobile-cv-item"><a href="Siddharth_Shankar_Resume.pdf" download="Siddharth_Shankar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link mobile-cv-link"><i class="fa-solid fa-file-pdf"></i> Download Official CV (PDF)</a></li>
         </ul>
 
         <div class="nav-actions">
           <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle Light / Dark mode">
             <i class="fa-solid fa-moon"></i>
           </button>
-          <a href="Siddharth_Shankar_Resume.pdf" download="Siddharth_Shankar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" title="Download Official Resume PDF">
+          <a href="Siddharth_Shankar_Resume.pdf" download="Siddharth_Shankar_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cv-btn" title="Download Official Resume PDF">
             <i class="fa-solid fa-download"></i> CV
           </a>
           <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle menu">
@@ -79,7 +82,7 @@
           <!-- Left Column: Bio & CTA -->
           <div class="hero-content">
             <div class="badge badge-live" style="margin-bottom: 18px;">
-              3+ Years Building Enterprise Healthcare & .NET Systems
+              3+ Years Enterprise Healthcare &amp; .NET Systems
             </div>
             
             <p class="hero-greeting">Hi, my name is</p>
@@ -962,6 +965,6 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js?v=2.2"></script>
 </body>
 </html>
