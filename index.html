@@ -1,222 +1,845 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal -->
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siddharth Shankar | Agentic AI & .NET Systems Engineer</title>
+  
+  <!-- Meta & SEO -->
+  <meta name="description" content="Portfolio of Siddharth Shankar - Software Engineer specializing in Agentic AI Systems, .NET 9 Clean Architecture, CQRS, and Distributed Systems.">
+  <meta name="keywords" content="Siddharth Shankar, Software Engineer, .NET 9, Agentic AI, Clean Architecture, CQRS, Semantic Kernel, Full Stack Developer, Distributed Systems">
+  <meta name="author" content="Siddharth Shankar">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Siddharth Shankar | Agentic AI & .NET Systems Engineer">
+  <meta property="og:description" content="Explore production-grade systems: MediFlow Claims Engine (.NET 9, CQRS), AgenticOps.Net (Semantic Kernel, SignalR), and Autonomous AI Agents.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="siddharthformal.jpeg">
+  
+  <!-- Stylesheets & Fonts -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="icon" type="image/jpeg" href="siddharthformal.jpeg">
 </head>
 <body>
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
-    </div>
-    <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#">Portfo<span>lio.</span></a></div>
-            <ul class="menu">
-                <li><a href="#home" class="menu-btn">Home</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#services" class="menu-btn">Projects</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
 
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
+  <!-- Top Reading Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Ambient Glowing Background Elements -->
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
+
+  <!-- =========================================================================
+       Navigation Bar
+       ========================================================================= -->
+  <header>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="nav-brand" aria-label="Siddharth Shankar Home">
+          <img src="siddharthformal.jpeg" alt="Siddharth Shankar" class="nav-brand-avatar">
+          <span>Siddharth<span class="highlight">.dev</span></span>
+        </a>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#projects" class="nav-link">Systems</a></li>
+          <li><a href="#sandbox" class="nav-link">Live Terminal</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#credentials" class="nav-link">Journey</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle Light / Dark mode">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+          <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
+      </div>
     </nav>
+  </header>
 
-    <!-- home section start -->
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Hello, my name is</div>
-                <div class="text-2">Siddharth Shankar</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
-                <a href="#">Hire me</a>
+  <!-- =========================================================================
+       Hero Section
+       ========================================================================= -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Bio & CTA -->
+          <div class="hero-content">
+            <div class="badge badge-live" style="margin-bottom: 18px;">
+              Available for Software Engineering Roles
             </div>
+            
+            <p class="hero-greeting">Hi, my name is</p>
+            <h1 class="hero-title">Siddharth Shankar</h1>
+            
+            <div class="hero-subtitle-wrapper">
+              <span>Architecting</span>
+              <span class="hero-typewriter" id="typewriter"></span>
+            </div>
+
+            <p class="hero-bio">
+              Software Engineer specializing in <strong>Agentic AI Systems</strong>, 
+              <strong>.NET 9 Clean Architecture</strong>, and <strong>Distributed Systems</strong>. 
+              Passionate about building autonomous LLM agents, high-throughput CQRS pipelines, and 
+              fault-tolerant enterprise platforms with clean, resilient code.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>Explore Featured Systems</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="https://drive.google.com/file/d/14V2doyPkZrjwQG-MJvpywoF0dlV_W9rr/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>Download Resume</span>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Get in Touch</span>
+              </a>
+            </div>
+
+            <div class="hero-socials">
+              <a href="https://github.com/siddharth161" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/siddharth-shankar-869272213/" target="_blank" rel="noopener noreferrer" class="hero-social-link">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="mailto:sidds4970@gmail.com" class="hero-social-link">
+                <i class="fa-solid fa-at"></i>
+                <span>sidds4970@gmail.com</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive 3D Portrait & Floating Badges -->
+          <div class="hero-visual">
+            <div class="floating-chip floating-chip-1">
+              <div class="chip-icon chip-icon-net">
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <div class="chip-text">
+                <h4>Clean Architecture & CQRS</h4>
+                <p>.NET 9 • MediatR • Outbox</p>
+              </div>
+            </div>
+
+            <div class="hero-portrait-card">
+              <img src="siddharthformal.jpeg" alt="Siddharth Shankar - Software Engineer">
+              <div class="hero-portrait-overlay"></div>
+            </div>
+
+            <div class="floating-chip floating-chip-2">
+              <div class="chip-icon chip-icon-ai">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div class="chip-text">
+                <h4>Autonomous LLM Agents</h4>
+                <p>Semantic Kernel • SignalR • OODA</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- about section start -->
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">About me</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="siddlin.jpeg" alt="">
-                </div>
-                <div class="column right">
-                    <div class="text">I'm Siddharth and I'm a <span class="typing-2"></span></div>
-                    <p>Pursuing Bachelor of Technology Electrical & Electronics Engineering (EEE) Focused in Programming , Web development, Data Structures, Problem Solving through Coding , Stock Market, .Nishant reads a lot of articles related to Financial market.</p>
-                    <a href="https://drive.google.com/file/d/14V2doyPkZrjwQG-MJvpywoF0dlV_W9rr/view?usp=sharing">Download CV</a>
-                </div>
-            </div>
+    <!-- =========================================================================
+         Metrics & Highlights Bar
+         ========================================================================= -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          
+          <div class="metric-item">
+            <div class="metric-number"><span class="accent">4</span>+</div>
+            <div class="metric-label">Flagship Production Systems</div>
+            <div class="metric-sub">Distributed & Agentic Architectures</div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number"><span class="accent">99.9</span>%</div>
+            <div class="metric-label">Fault-Tolerant Outbox Pipelines</div>
+            <div class="metric-sub">Polly Circuit Breakers & Retries</div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number"><span class="accent">&lt;100</span>ms</div>
+            <div class="metric-label">Claims Adjudication Latency</div>
+            <div class="metric-sub">Optimized EF Core 9 & CQRS</div>
+          </div>
+
+          <div class="metric-item">
+            <div class="metric-number"><span class="accent">100</span>%</div>
+            <div class="metric-label">Test-Driven Unit Verification</div>
+            <div class="metric-sub">xUnit • FluentAssertions • Docker</div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- services section start -->
-    <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">My Projects</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web Design</div>
-                        <p>I am a web dedeveloper using html css javascript</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Project 2</div>
-                        <p> Upcoming project is from arduino uno upon a automatic car parking system where arduino randomly alots space according to and gate</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Project 3</div>
-                        <p>Pygame base game on snake in this we are auto updating the snake movement by using penup command and xor and AND gate in this 20 pixel per unit is taken</p>
-                    </div>
-                </div>
-               </div>
-            </div>
+    <!-- =========================================================================
+         Featured Systems & Projects Section
+         ========================================================================= -->
+    <section class="projects" id="projects">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill">
+            <i class="fa-solid fa-microchip"></i>
+            <span>Engineering Portfolio</span>
+          </div>
+          <h2 class="section-title">Featured <span class="gradient-text">Systems & Projects</span></h2>
+          <p class="section-desc">
+            Production-grade distributed backends, autonomous AI agent workflows, and intelligent software systems architected for performance, modularity, and scale.
+          </p>
         </div>
+
+        <!-- Filter Tabs -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All Systems</button>
+          <button class="filter-btn" data-filter="agentic">Agentic AI & LLMs</button>
+          <button class="filter-btn" data-filter="dotnet">.NET 9 & Systems</button>
+          <button class="filter-btn" data-filter="ml">Data Science & ML</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+
+          <!-- Project 1: MediFlow Claims Engine -->
+          <article class="project-card" data-category="dotnet">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <span class="project-category">
+                  <i class="fa-solid fa-hospital"></i> Enterprise Systems & .NET 9
+                </span>
+                <div class="project-links">
+                  <a href="https://github.com/siddharth161/MediFlow-Claims-Engine" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">
+                MediFlow Claims Engine
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.9rem; opacity: 0.7;"></i>
+              </h3>
+              <p class="project-subtitle">Distributed Healthcare Claims Adjudication & Provider Engine</p>
+              <p class="project-desc">
+                A high-performance claims adjudication and validation pipeline built with <strong>.NET 9</strong>, implementing <strong>Domain-Driven Design (DDD)</strong>, <strong>Clean Architecture</strong>, <strong>CQRS with MediatR</strong>, and the <strong>Transactional Outbox Pattern</strong>. Enforces strict Medicaid & Medicare (EDI 837P/I) standards and automated event dispatching.
+              </p>
+
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Clean Architecture with Rich Domain Entities, Value Objects (`NPI`, `Money`, `ICD-10`), and Domain Events.</li>
+                <li><i class="fa-solid fa-check"></i> Segregated CQRS command/query pipelines with MediatR & automated FluentValidation behaviors.</li>
+                <li><i class="fa-solid fa-check"></i> Transactional Outbox Pattern guaranteeing atomic DB state persistence and background worker delivery.</li>
+                <li><i class="fa-solid fa-check"></i> Polly resilience policies (circuit breakers, exponential backoff) and RFC 7807 ProblemDetails.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="badge badge-tech">.NET 9</span>
+                <span class="badge badge-tech">C#</span>
+                <span class="badge badge-tech">Clean Architecture</span>
+                <span class="badge badge-tech">CQRS & MediatR</span>
+                <span class="badge badge-tech">EF Core 9</span>
+                <span class="badge badge-tech">Transactional Outbox</span>
+                <span class="badge badge-tech">Docker</span>
+                <span class="badge badge-tech">xUnit</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/siddharth161/MediFlow-Claims-Engine" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> View Architecture
+              </a>
+              <button class="btn btn-outline btn-sm run-sim-btn" data-sim="mediflow">
+                <i class="fa-solid fa-play"></i> Simulate in Terminal
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2: AgenticOps.Net -->
+          <article class="project-card" data-category="agentic dotnet">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <span class="project-category">
+                  <i class="fa-solid fa-robot"></i> Agentic AI & Infrastructure
+                </span>
+                <div class="project-links">
+                  <a href="https://github.com/siddharth161/AgenticOps-Net" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">
+                AgenticOps.Net
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.9rem; opacity: 0.7;"></i>
+              </h3>
+              <p class="project-subtitle">Autonomous AI SRE & Incident Remediation Agent Engine</p>
+              <p class="project-desc">
+                An autonomous Site Reliability Engineering (SRE) incident remediation agent built natively in <strong>.NET 9</strong> with <strong>Microsoft Semantic Kernel</strong>, <strong>ASP.NET Core Minimal APIs</strong>, and <strong>SignalR</strong>. Autonomously analyzes container crash telemetry, performs Root Cause Analysis (RCA), and executes guarded remediation workflows.
+              </p>
+
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Autonomous 5-step agent execution loop: Observation &rarr; Thought &rarr; Decide &rarr; Action &rarr; Verification.</li>
+                <li><i class="fa-solid fa-check"></i> Custom Semantic Kernel Tool-Calling Plugins for Kubernetes pod diagnostics and log pattern classifiers.</li>
+                <li><i class="fa-solid fa-check"></i> Safety Guardrails Engine: auto-remediates safe tasks and enforces human-in-the-loop approval on high-risk actions.</li>
+                <li><i class="fa-solid fa-check"></i> Live WebSocket streaming of agent reasoning thought chains over real-time SignalR hubs.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="badge badge-tech">.NET 9</span>
+                <span class="badge badge-tech">Semantic Kernel</span>
+                <span class="badge badge-tech">SignalR WebSockets</span>
+                <span class="badge badge-tech">Kubernetes Diagnostics</span>
+                <span class="badge badge-tech">OODA Loop</span>
+                <span class="badge badge-tech">Safety Policies</span>
+                <span class="badge badge-tech">Docker</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/siddharth161/AgenticOps-Net" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> View Architecture
+              </a>
+              <button class="btn btn-outline btn-sm run-sim-btn" data-sim="agenticops">
+                <i class="fa-solid fa-play"></i> Simulate in Terminal
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: Auto Job Application Agent -->
+          <article class="project-card" data-category="agentic">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <span class="project-category">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i> Multi-Agent Orchestration
+                </span>
+                <div class="project-links">
+                  <a href="https://github.com/siddharth161" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">
+                Auto Job Application Agent
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.9rem; opacity: 0.7;"></i>
+              </h3>
+              <p class="project-subtitle">Autonomous Multi-Agent Discovery, ATS Resume & Browser Engine</p>
+              <p class="project-desc">
+                An autonomous, local-first multi-agent pipeline orchestrating <strong>n8n</strong>, local <strong>Ollama LLMs (Qwen 2.5 / Llama 3.3)</strong>, <strong>Typst ATS compiler</strong>, <strong>Qdrant vector search</strong>, and <strong>Playwright / Browser-Use</strong>. Discovers postings across Greenhouse, Lever, and Ashby, tailors resumes, and auto-fills application forms with Telegram approvals.
+              </p>
+
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Automated job discovery via public ATS APIs with PostgreSQL state tracking and deduplication.</li>
+                <li><i class="fa-solid fa-check"></i> Semantic match scoring against profile embeddings using Qdrant vector database.</li>
+                <li><i class="fa-solid fa-check"></i> Pixel-perfect ATS resume & cover letter rendering compiled dynamically via Typst (95%+ ATS score).</li>
+                <li><i class="fa-solid fa-check"></i> Autonomous browser form filling via Browser-Use + Playwright, halting safely for 1-click Telegram review.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="badge badge-tech">Python</span>
+                <span class="badge badge-tech">n8n Orchestrator</span>
+                <span class="badge badge-tech">Ollama Local LLMs</span>
+                <span class="badge badge-tech">Typst PDF Engine</span>
+                <span class="badge badge-tech">Browser-Use</span>
+                <span class="badge badge-tech">Playwright</span>
+                <span class="badge badge-tech">Qdrant</span>
+                <span class="badge badge-tech">PostgreSQL 16</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/siddharth161" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> Explore Workflow
+              </a>
+              <button class="btn btn-outline btn-sm run-sim-btn" data-sim="jobagent">
+                <i class="fa-solid fa-play"></i> Simulate in Terminal
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 4: Water Quality Classification -->
+          <article class="project-card" data-category="ml">
+            <div class="project-card-inner">
+              <div class="project-top">
+                <span class="project-category">
+                  <i class="fa-solid fa-chart-pie"></i> Machine Learning & Analytics
+                </span>
+                <div class="project-links">
+                  <a href="https://github.com/siddharth161/Water-Quality-Classification" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </div>
+              </div>
+
+              <h3 class="project-title">
+                Water Potability ML Engine
+                <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.9rem; opacity: 0.7;"></i>
+              </h3>
+              <p class="project-subtitle">Hydro-Chemical Water Potability Predictive Classification</p>
+              <p class="project-desc">
+                An end-to-end Machine Learning classification engine built with <strong>Python</strong>, <strong>Scikit-Learn</strong>, and <strong>Pandas</strong> to predict water potability across critical hydro-chemical parameters (pH, hardness, solids, chloramines, conductivity, organic carbon, and turbidity).
+              </p>
+
+              <ul class="project-highlights">
+                <li><i class="fa-solid fa-check"></i> Rigorous Exploratory Data Analysis (EDA) addressing missing value imputation and class imbalance.</li>
+                <li><i class="fa-solid fa-check"></i> Multi-model benchmarking across Random Forest, Gradient Boosting, SVM, and Logistic Regression.</li>
+                <li><i class="fa-solid fa-check"></i> Hyperparameter optimization via GridSearchCV and cross-validated metric evaluation (ROC-AUC, Precision, Recall).</li>
+                <li><i class="fa-solid fa-check"></i> Developed alongside the IBM Data Science Professional Certification curriculum.</li>
+              </ul>
+
+              <div class="project-tags">
+                <span class="badge badge-tech">Python</span>
+                <span class="badge badge-tech">Scikit-Learn</span>
+                <span class="badge badge-tech">Pandas</span>
+                <span class="badge badge-tech">NumPy</span>
+                <span class="badge badge-tech">Data Science</span>
+                <span class="badge badge-tech">IBM Certified</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/siddharth161/Water-Quality-Classification" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <i class="fa-brands fa-github"></i> View Model Code
+              </a>
+              <a href="https://github.com/siddharth161/coursera-IBM-Data-Science-Professional-Certificates" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                <i class="fa-solid fa-certificate"></i> View Certificates
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
     </section>
 
-    <!-- skills section start -->
-    <section class="skills" id="skills">
-        <div class="max-width">
-            <h2 class="title">My skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills & experiences.</div>
-                    <p>Talking about my skills i m very comfortable with c++ language with data structure and algorithmto On top of that very proficient in full stack development using html,css,javascript,nodejs,react,mangango language.And worked on a python project of snake game too</p>
-                    <a href="#">Read more</a>
-                </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line html"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>JavaScript</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="line js"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>c</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="line c"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>python</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="line python"></div>
-                    </div>
-                </div>
-            </div>
+    <!-- =========================================================================
+         Interactive Architecture & Agent Playground Terminal
+         ========================================================================= -->
+    <section class="sandbox-section" id="sandbox">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill">
+            <i class="fa-solid fa-terminal"></i>
+            <span>Interactive Sandbox</span>
+          </div>
+          <h2 class="section-title">Live Architecture & <span class="gradient-text">Agent Terminal</span></h2>
+          <p class="section-desc">
+            Test and inspect Siddharth's agentic OODA reasoning loops and distributed .NET CQRS pipeline telemetry in real time.
+          </p>
         </div>
+
+        <div class="terminal-card">
+          <!-- Terminal Window Header -->
+          <div class="terminal-header">
+            <div class="terminal-controls">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">
+              <i class="fa-solid fa-server"></i>
+              <span>siddharth-agent-orchestrator@cluster-01:~</span>
+            </div>
+            <div class="badge badge-live" style="font-size: 0.72rem; padding: 3px 10px;">
+              ENGINE ONLINE
+            </div>
+          </div>
+
+          <!-- Scenario Trigger Bar -->
+          <div class="terminal-actions-bar">
+            <div class="terminal-sim-buttons">
+              <button class="terminal-btn active" id="btn-sim-agenticops">
+                <i class="fa-solid fa-play"></i> Run SRE Triage (AgenticOps)
+              </button>
+              <button class="terminal-btn" id="btn-sim-mediflow">
+                <i class="fa-solid fa-play"></i> Adjudicate Claim (MediFlow)
+              </button>
+              <button class="terminal-btn" id="btn-sim-jobagent">
+                <i class="fa-solid fa-play"></i> Run Job Agent Pipeline
+              </button>
+            </div>
+            <div>
+              <button class="terminal-btn" id="btn-clear-term" title="Clear console output">
+                <i class="fa-solid fa-trash-can"></i> Clear
+              </button>
+            </div>
+          </div>
+
+          <!-- Log Output Area -->
+          <div class="terminal-body" id="terminal-body">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </div>
+
+      </div>
     </section>
 
-  
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>Pursuing Bachelor of Technology Electrical & Electronics Engineering (EEE) Focused in Programming , Web development, Data Structures, Problem Solving through Coding , Stock Market, reads a lot of articles related to Financial market.</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Name</div>
-                                <div class="sub-title">Siddharth Shankar</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <div class="head">Address</div>
-                                <div class="sub-title">New Delhi</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">sidds4970@gmail.com</div>
-                            </div>
-                        </div>
-						<div class="row">
-                            <i class="fa fa-linkedin"></i>
-                            <div class="info">
-                                <div class="head">Linkedin</div>
-                                <div class="sub-title">linkedin.com/in/siddharth-shankar10</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="column right">
-                    <form action="#">
-     
-                    <div class="text">Message me</div>                   <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" required>
-                            </div>
-                            <div class="field email">
-                                <input type="email" placeholder="Email" required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    <!-- =========================================================================
+         Skills & Capabilities Matrix
+         ========================================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill">
+            <i class="fa-solid fa-layer-group"></i>
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 class="section-title">Skills & <span class="gradient-text">Technologies</span></h2>
+          <p class="section-desc">
+            A comprehensive overview of programming languages, distributed architecture patterns, autonomous agent frameworks, and engineering tools.
+          </p>
         </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Backend & Systems -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h3 class="skill-cat-title">Backend & Systems</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> C# (.NET 9)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> ASP.NET Core</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Clean Architecture</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> CQRS (MediatR)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Domain-Driven Design (DDD)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Transactional Outbox</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> EF Core 9</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> C++ / OOP</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> RESTful APIs</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Agentic AI & LLMs -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h3 class="skill-cat-title">Agentic AI & LLMs</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Semantic Kernel</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Ollama Local LLMs</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Autonomous OODA Loops</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Qdrant Vector DB</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Multi-Agent Orchestration</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Tool Calling & Plugins</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Prompt Engineering</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Telegram Bot APIs</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Full-Stack & Frontend -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <h3 class="skill-cat-title">Full Stack & Web</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> JavaScript (ES6+)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> TypeScript</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> React</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> HTML5 & Semantic Web</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> CSS3 & Glassmorphism</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> SignalR (WebSockets)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Responsive UI Design</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Web Performance</span>
+            </div>
+          </div>
+
+          <!-- Category 4: Cloud, DevOps & Tools -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+              <h3 class="skill-cat-title">DevOps & Infrastructure</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Docker & Compose</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Kubernetes Concepts</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> GitHub Actions CI/CD</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Linux / Bash</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Git & GitHub</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> n8n Automation</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Playwright Automation</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Typst Document Engine</span>
+            </div>
+          </div>
+
+          <!-- Category 5: Data & Machine Learning -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-database"></i>
+              </div>
+              <h3 class="skill-cat-title">Data & Machine Learning</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Python</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> PostgreSQL 16</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> SQL Server / T-SQL</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Redis Caching</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Scikit-Learn</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Pandas & NumPy</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Exploratory Data Analysis</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> xUnit & Unit Testing</span>
+            </div>
+          </div>
+
+          <!-- Category 6: Engineering Principles -->
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-cat-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="skill-cat-title">Engineering Excellence</h3>
+            </div>
+            <div class="skill-tags-cloud">
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> SOLID Principles</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Test-Driven Design (TDD)</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Event-Driven Architecture</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Fault Tolerance & Retries</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Human-In-The-Loop AI</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> System Observability</span>
+              <span class="skill-pill"><i class="fa-solid fa-check"></i> Open Source Contributions</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <!-- footer section start -->
-    <footer>
-        <span>Created By <a href="https://www.linkedin.com/in/siddharth-shankar10/">Siddharth</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
-    </footer>
+    <!-- =========================================================================
+         Education & Certifications Section
+         ========================================================================= -->
+    <section class="credentials-section" id="credentials">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Academic & Professional Journey</span>
+          </div>
+          <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+          <p class="section-desc">
+            Foundational engineering knowledge paired with continuous professional specialization.
+          </p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="credentials-grid">
+          
+          <!-- Education Card -->
+          <div class="credential-card">
+            <div class="cred-top">
+              <div class="cred-icon">
+                <i class="fa-solid fa-building-columns"></i>
+              </div>
+              <div class="cred-title-grp">
+                <h3>Bachelor of Technology (B.Tech)</h3>
+                <p>Electrical & Electronics Engineering (EEE)</p>
+              </div>
+            </div>
+            <ul class="cred-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> Strong curriculum foundation in programming, data structures, algorithms, microprocessors, and systems control.</li>
+              <li><i class="fa-solid fa-angle-right"></i> Specialized in software engineering, distributed systems development, and autonomous agent architectures.</li>
+              <li><i class="fa-solid fa-angle-right"></i> Active problem solver on competitive platforms and open-source project creator.</li>
+            </ul>
+          </div>
+
+          <!-- Certification Card -->
+          <div class="credential-card">
+            <div class="cred-top">
+              <div class="cred-icon" style="background: rgba(99, 102, 241, 0.12); color: var(--accent-indigo); border-color: rgba(99, 102, 241, 0.25);">
+                <i class="fa-solid fa-certificate"></i>
+              </div>
+              <div class="cred-title-grp">
+                <h3>IBM Data Science Professional</h3>
+                <p>IBM & Coursera Credential Program</p>
+              </div>
+            </div>
+            <ul class="cred-bullets">
+              <li><i class="fa-solid fa-angle-right"></i> Completed multi-course specialization covering Python for Data Science, SQL Databases, Data Analysis, and Machine Learning.</li>
+              <li><i class="fa-solid fa-angle-right"></i> Designed and deployed applied machine learning predictive models and exploratory data analysis pipelines.</li>
+              <li><i class="fa-solid fa-angle-right"></i> <a href="https://github.com/siddharth161/coursera-IBM-Data-Science-Professional-Certificates" target="_blank" rel="noopener noreferrer" style="color: var(--accent-indigo); font-weight: 600; text-decoration: underline;">View Verified Coursework & Projects &rarr;</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         Contact Section
+         ========================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-pill">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Get in Touch</span>
+          </div>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Exceptional</span></h2>
+          <p class="section-desc">
+            Whether you are looking for an engineer to architect agentic AI systems, scale high-performance .NET backends, or collaborate on innovative distributed software, my inbox is always open.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Cards Info -->
+          <div class="contact-info-panel">
+            
+            <div class="contact-card-item">
+              <div class="contact-card-icon">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div class="contact-card-text">
+                <h4>Direct Email</h4>
+                <p><a href="mailto:sidds4970@gmail.com">sidds4970@gmail.com</a></p>
+              </div>
+              <button class="copy-btn" id="copy-email-btn" title="Copy email to clipboard">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-card-icon">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+              <div class="contact-card-text">
+                <h4>LinkedIn</h4>
+                <p><a href="https://www.linkedin.com/in/siddharth-shankar-869272213/" target="_blank" rel="noopener noreferrer">linkedin.com/in/siddharth-shankar</a></p>
+              </div>
+              <a href="https://www.linkedin.com/in/siddharth-shankar-869272213/" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration: none;">
+                Connect
+              </a>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-card-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="contact-card-text">
+                <h4>GitHub</h4>
+                <p><a href="https://github.com/siddharth161" target="_blank" rel="noopener noreferrer">github.com/siddharth161</a></p>
+              </div>
+              <a href="https://github.com/siddharth161" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration: none;">
+                Follow
+              </a>
+            </div>
+
+            <div class="contact-card-item">
+              <div class="contact-card-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="contact-card-text">
+                <h4>Location</h4>
+                <p>New Delhi, India (Open to Remote & Relocation)</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <form id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Your Email</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Software Engineering Role / Project Discussion" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-regular fa-paper-plane"></i>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       Footer
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-text">
+          &copy; <span id="footer-year"></span> Siddharth Shankar. Engineered with precision, clean architecture & passion.
+        </p>
+        <div class="footer-links">
+          <a href="https://github.com/siddharth161" target="_blank" rel="noopener noreferrer" class="footer-link" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/siddharth-shankar-869272213/" target="_blank" rel="noopener noreferrer" class="footer-link" title="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="mailto:sidds4970@gmail.com" class="footer-link" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top" title="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Interactive Toast Feedback -->
+  <div class="toast-notification" id="toast">
+    <i class="fa-solid fa-circle-check" style="color: var(--accent-emerald);"></i>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
