@@ -17,10 +17,13 @@
   <meta property="og:image" content="siddharth-profile.jpg">
   
   <!-- Stylesheets & Fonts -->
-  <link rel="stylesheet" href="style.css?v=2.3">
+  <link rel="stylesheet" href="style.css?v=3.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="icon" type="image/jpeg" href="favicon.jpg">
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=4.0">
+  <link rel="apple-touch-icon" href="favicon.png?v=4.0">
 </head>
 <body>
 
@@ -41,7 +44,9 @@
     <nav class="navbar" id="navbar">
       <div class="nav-container">
         <a href="#home" class="nav-brand" aria-label="Siddharth Shankar Home">
-          <img src="favicon.jpg" alt="SS Logo" class="nav-brand-avatar">
+          <div class="nav-brand-icon" aria-hidden="true">
+            <span class="brand-code-sym">&lt;</span><span class="brand-monogram">SS</span><span class="brand-code-sym">/&gt;</span>
+          </div>
           <span>Siddharth<span class="highlight">.dev</span></span>
         </a>
 
@@ -781,7 +786,7 @@
           <!-- Pusa Institute Diploma -->
           <div class="credential-card">
             <div class="cred-top">
-              <div class="cred-icon" style="background: rgba(99, 102, 241, 0.12); color: var(--accent-indigo); border-color: rgba(99, 102, 241, 0.25);">
+              <div class="cred-icon" style="background: rgba(0, 212, 255, 0.12); color: var(--accent-indigo); border-color: rgba(0, 212, 255, 0.25);">
                 <i class="fa-solid fa-award"></i>
               </div>
               <div class="cred-title-grp">
@@ -965,6 +970,6 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="script.js?v=2.3"></script>
+  <script src="script.js?v=3.0"></script>
 </body>
 </html>

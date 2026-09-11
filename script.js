@@ -153,12 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // =========================================================================
   const typewriterElement = document.getElementById('typewriter');
   const roles = [
-    'Agentic AI Systems',
-    '.NET 9 Clean Architectures',
-    'Autonomous Multi-Agent Loops',
-    'High-Throughput CQRS Backends',
-    'Resilient Distributed Platforms',
-    'Full-Stack Intelligent Web Apps'
+    '.NET 9 & C# Enterprise APIs',
+    'Distributed Backend Architecture',
+    'HIPAA-Compliant Medicare Platforms',
+    'High-Throughput SQL & Data Pipelines',
+    'Cloud-Native CI/CD & Agentic Workflows'
   ];
 
   let roleIdx = 0;
